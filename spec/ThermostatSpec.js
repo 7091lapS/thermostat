@@ -27,13 +27,13 @@ describe ('Thermostat', function(){
   });
 
   it('can switch off power saving', function() {
-    thermostat.powerSavingOff();
+    thermostat.echoSwitch();
     expect(thermostat.maxTemp).toEqual(32);
   });
 
   it('can switch on power saving', function() {
-    thermostat.maxtemp = 32;
-    thermostat.powerSavingOn();
+    thermostat.echoSwitch();
+    thermostat.echoSwitch();
     expect(thermostat.maxTemp).toEqual(25);
   });
 
@@ -52,6 +52,25 @@ describe ('Thermostat', function(){
     it('cannot go below min temperature', function() {
       expect( function(){ thermostat.decreaseTemp(11) }).toThrow("Temperature cannot go below 10.");
     });
+  });
+
+  describe('changes colour', function() {
+
+    it('displays green when temp is below 18', function() {
+      thermostat.temperature = 17;
+      expect(thermostat.colour()).toEqual("green");
+    });
+
+    it('dispalys yellow when temp is above 18 and below 25', function() {
+      thermostat.temperature = 19;
+      expect(thermostat.colour()).toEqual("yellow");
+    });
+
+    it('displays red when temp is above 25', function() {
+      thermostat.temperature = 25;
+      expect(thermostat.colour()).toEqual("red");
+    });
+
   });
 
 });
