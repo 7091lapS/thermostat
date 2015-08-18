@@ -36,12 +36,3 @@ Thermostat.prototype.powerSavingOn = function () {
 Thermostat.prototype.resetTemp = function () {
   this.temperature = 20;
 };
-
-Thermostat.prototype.tempControl = function (temperature) {
-  if (temperature < this.minTemp) {
-    throw('Temperature cannot go below ' + this.minTemp + '.');
-  }
-  else if (temperature > this.maxTemp) {
-    throw('Temperature cannot go above ' + this.maxTemp + '.');
-  }
-};
