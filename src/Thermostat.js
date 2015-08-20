@@ -47,5 +47,6 @@ Thermostat.prototype.colour = function() {
     return "green"}
   else if (this.temperature < 25) {
     return "yellow"}
-  else {return "red"};
+  else {
+    return "red"};
 };

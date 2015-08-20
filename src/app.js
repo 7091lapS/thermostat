@@ -1,11 +1,13 @@
 thermostat = new Thermostat();
 
-Update = function() {
-  temperature.innerHTML = thermostat.temperature;
-};
 
 var temperature = document.getElementsByTagName('span')[0];
 temperature.innerHTML = thermostat.temperature;
+
+Update = function() {
+  temperature.innerHTML = thermostat.temperature;
+  temperature.style.color = thermostat.colour;
+};
 
 var increase = document.getElementsByTagName('input')[0];
 increase.onclick = function() {
@@ -28,5 +30,5 @@ resetTemperature.onclick = function() {
 var swittch = document.getElementsByTagName('input')[3];
 swittch.onchange = function() {
   thermostat.echoSwitch();
-  // Update();
+  Update();
 };
