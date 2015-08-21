@@ -23,6 +23,11 @@ $(document).ready(function() {
     tempUpdate();
   });
 
+  $('.reset').click(function() {
+    thermostat.resetTemp();
+    tempUpdate();
+  })
+
   // Weather Api JSON call
 
   $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=London,uk",                 function(weather_info) {
