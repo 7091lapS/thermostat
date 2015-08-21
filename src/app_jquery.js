@@ -3,10 +3,15 @@ $(document).ready(function() {
   var thermostat = new Thermostat();
 
   function tempUpdate() {
-    $('.temperature').html(thermostat.temperature);
+    $('.temperature').html(thermostat.temperature + " °C");
+    colorUpdate();
   };
 
   tempUpdate();
+
+  function colorUpdate() {
+    $('.temperature').css('color', thermostat.colour())
+  };
 
   $('.increase').click(function() {
     thermostat.increaseTemp(1);
@@ -30,7 +35,7 @@ $(document).ready(function() {
 
   // Weather Api JSON call
 
-  $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=London,uk",                 function(weather_info) {
+  $.getJSON("http://api.openweathermap.org/data/2.5/weather?q=NewYork,usa",                 function(weather_info) {
       $(".location").html(weather_info.name + ", " + weather_info.sys.country);
       $(".weather").html(weather_info.weather[0].description);
       $(".local_temp").html(Math.round(weather_info.main.temp - 273.15) + "°C");

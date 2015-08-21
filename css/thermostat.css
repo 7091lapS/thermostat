@@ -1,6 +1,37 @@
-h2 {
+body {
+  background-image: url(../Public/NY.jpeg);
+  background-repeat: no-repeat;
+  background-size: 105% auto;
+  text-align: left;
+  padding-left: 30px;
 
-  
 
+  margin: 0 auto;
+}
 
+h4 {
+  color: white;
+}
+
+h3 {
+  font-size: 20px;
+  color: white;
+}
+
+.temperature {
+  font-size: 150px;
+  opacity: 0.6;
+  color: white;
+}
+
+.weather {
+  font-size: 35px;
+}
+
+.location {
+  font-size: 70px;
+}
+
+.local_temp {
+  font-size: 100px;
 }
