@@ -8,19 +8,26 @@
 </head>
 <body>
 
-<h1> Thermostat </h1>
-<h2><span class='temperature'></span></h2>
+<h1>./thermostat</h1>
+<h2><span class='temperature'></span>°C</h2>
 <h3>
-  <input class='increase' type = 'button' value= '+'>
-  <input class='decrease' type = 'button' value= '-'>
-  <section><input class='reset' type = 'button' value= 'RESET'></section>
-  Power Saving Mode<input type='checkbox' class='powersave' checked>
+  <input class='increase' type = 'button' value= '∧'>
+  <input class='decrease' type = 'button' value= '∨'>
+  <section><input class='reset' type = 'button' value='reset'></section>
+  <section class='psave'>
+  <span>power saving</span>
+  <div class='powersave'>
+  <input id="powersaveInput" type='checkbox' checked>
+  <label for="powersaveInput"></label>
+</div>
+</section>
+<span class=space></span>
 </h3>
 <h4>
   <div class='location'></div>
   <div class='weather'></div>
   <div class='local_temp'></div>
-  <div class='weather_image'></div>
+  <!-- <div class='weather_image'></div> -->
 </h4>
 
   <script src='src/thermostat.js'></script>
