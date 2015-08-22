@@ -1,4 +1,4 @@
-describe ('Thermostat', function(){
+describe ('Thermostat Logic', function(){
 
   var thermostat;
 
@@ -58,7 +58,7 @@ describe ('Thermostat', function(){
 
     it('displays green when temp is below 18', function() {
       thermostat.temperature = 17;
-      expect(thermostat.colour()).toEqual("green");
+      expect(thermostat.colour()).toEqual("rgb(127, 255, 0)");
     });
 
     it('dispalys yellow when temp is above 18 and below 25', function() {
@@ -68,7 +68,7 @@ describe ('Thermostat', function(){
 
     it('displays red when temp is above 25', function() {
       thermostat.temperature = 25;
-      expect(thermostat.colour()).toEqual("red");
+      expect(thermostat.colour()).toEqual("rgb(255, 69, 0)");
     });
 
   });

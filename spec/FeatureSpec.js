@@ -1,4 +1,4 @@
-describe('Thermostat',function(){
+describe('Thermostat features',function(){
 
   var thermostat = new Thermostat();
 
@@ -30,7 +30,7 @@ describe('Thermostat',function(){
   });
 
   it('should have power saving button on by default', function() {
-    expect(".powersave").toBeChecked();
+    expect("#powersaveInput").toBeChecked();
   });
 
   it('should reset the temperature when reset is clicked', function() {
@@ -38,6 +38,5 @@ describe('Thermostat',function(){
     $(".reset").click();
     expect('.temperature').toContainText('20');
   });
-
 
 });
