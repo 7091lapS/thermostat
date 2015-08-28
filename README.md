@@ -18,6 +18,8 @@ ________________________
 
 Technologies used: javascript, jquery, jasmine, html, css, bootstrap.css, rack, sinatra, OpenWeatherMap api.
 
+NB: In order to run for the JQuery tests to work, you need to disable local file restrictions in your browser
+
 
 
 
