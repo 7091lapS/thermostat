@@ -7,6 +7,8 @@ I worked on this project during week 6 at Makers Academy. It served as great pra
 The whole project has been tested using jasmine and jasmine j-query.
 The interface was developed in vanilla javascript first, then translated in jquery. The original js file is included for reference.
 
+To run the app, just git clone or download the project folder and open index.html.
+
 These are the functionalities:
 
 - the temperature can be set and reset by clicking the relative buttons; 
